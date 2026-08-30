@@ -90,10 +90,12 @@ Para la resta se reutiliza el bloque lógico del sumador de 4 bits, aplicando la
 ---
 
 ## Referencias
-[1] ASIC World, "Verilog Tutorial," 2023. Disponible en: http://www.asic-world.com/verilog/ (Accedido: 6 de septiembre de 2025).  
-[2] IEEE, "Standard for Verilog Hardware Description Language," 2005. Disponible en: https://standards.ieee.org/standard/1364-2005.html.  
-[3] Intel, "Quartus II Handbook," 2016. Disponible en: https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/qts/qts_qii51002.pdf.  
-[4] Intel, “Centro de asistencia del software de diseño Quartus Prime,” sitio web en español. Disponible en: https://www.intel.la/content/www/xl/es/support/programmable/support-resources/design-guidance/quartus-support.html (Accedido: 7 de septiembre de 2025).  
+## Referencias
+1. ASIC World, *Verilog Tutorial*, 2023. [Enlace](http://www.asic-world.com/verilog/)
+2. IEEE, *Standard for Verilog HDL*, 2005. [Enlace](https://standards.ieee.org/standard/1364-2005.html)
+3. Intel, *Quartus II Handbook*, 2016. [PDF](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/qts/qts_qii51002.pdf)
+4. Intel, *Centro de asistencia Quartus Prime*, 2025. [Enlace](https://www.intel.la/content/www/xl/es/support/programmable/support-resources/design-guidance/quartus-support.html)
+
 =======
 # arquitecturaDeProcesadoresG1E6
 
