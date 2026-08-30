@@ -1,3 +1,4 @@
+<<<<<<< HEAD
         
 # Lab01 - Sumador/Restador de 4 bits
 
@@ -93,3 +94,17 @@ Para la resta se reutiliza el bloque lógico del sumador de 4 bits, aplicando la
 [2] IEEE, "Standard for Verilog Hardware Description Language," 2005. Disponible en: https://standards.ieee.org/standard/1364-2005.html.  
 [3] Intel, "Quartus II Handbook," 2016. Disponible en: https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/hb/qts/qts_qii51002.pdf.  
 [4] Intel, “Centro de asistencia del software de diseño Quartus Prime,” sitio web en español. Disponible en: https://www.intel.la/content/www/xl/es/support/programmable/support-resources/design-guidance/quartus-support.html (Accedido: 7 de septiembre de 2025).  
+=======
+# arquitecturaDeProcesadoresG1E6
+
+Arquitectura de Procesadores - Grupo 1 Equipo 6
+
+## Descripción
+Este es el repositorio número 6 del la asignatura Arquitectura de Procesadores.
+
+## Integrantes
+    * [<!-- Remplace aqui nombre 1. -->](<!-- Remplace aqui link de usario 1 de github -->) 
+    * [<!-- Remplace aqui nombre 2. -->](<!-- Remplace aqui link de usario 2 de github -->) 
+    * [<!-- Remplace aqui nombre 3. -->](<!-- Remplace aqui link de usario 3 de github -->) 
+
+>>>>>>> b9a24595f11a015051c6bea51f24e3b468bc2004
