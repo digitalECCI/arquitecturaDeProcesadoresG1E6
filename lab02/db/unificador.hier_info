@@ -1,0 +1,343 @@
+|unificador
+entradaab[0] => entradaab[0].IN2
+entradaab[1] => entradaab[1].IN2
+entradaab[2] => entradaab[2].IN2
+entradaab[3] => entradaab[3].IN2
+entradaba[0] => entradaba[0].IN2
+entradaba[1] => entradaba[1].IN2
+entradaba[2] => entradaba[2].IN2
+entradaba[3] => entradaba[3].IN2
+selecd[0] => estado.IN1
+selecd[1] => selecd[1].IN1
+entradaAU[0] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[1] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[2] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[3] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[4] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[5] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAU[6] <= multiplexor_7seg:entradaAunidades.SSeg
+entradaAD[0] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[1] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[2] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[3] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[4] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[5] <= multiplexor_7seg:entradaAdecenas.SSeg
+entradaAD[6] <= multiplexor_7seg:entradaAdecenas.SSeg
+decena[0] <= multiplexor_7seg:salidadecenas.SSeg
+decena[1] <= multiplexor_7seg:salidadecenas.SSeg
+decena[2] <= multiplexor_7seg:salidadecenas.SSeg
+decena[3] <= multiplexor_7seg:salidadecenas.SSeg
+decena[4] <= multiplexor_7seg:salidadecenas.SSeg
+decena[5] <= multiplexor_7seg:salidadecenas.SSeg
+decena[6] <= multiplexor_7seg:salidadecenas.SSeg
+unidad[0] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[1] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[2] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[3] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[4] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[5] <= multiplexor_7seg:salidaunidades.SSeg
+unidad[6] <= multiplexor_7seg:salidaunidades.SSeg
+entradaBU[0] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[1] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[2] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[3] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[4] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[5] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBU[6] <= multiplexor_7seg:entradaBunidades.SSeg
+entradaBD[0] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[1] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[2] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[3] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[4] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[5] <= multiplexor_7seg:entradaBdecenas.SSeg
+entradaBD[6] <= multiplexor_7seg:entradaBdecenas.SSeg
+signo <= operaciones:moduloselector.negativo
+menos <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector
+selec[0] => selec[0].IN1
+selec[1] => salida_reg.OUTPUTSELECT
+selec[1] => Mux0.IN0
+selec[1] => Mux1.IN0
+selec[1] => Mux2.IN0
+selec[1] => Mux3.IN0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+salida[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= salida_reg.DB_MAX_OUTPUT_PORT_TYPE
+negativo <= restadors:sumadorrestador.C4
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador
+EntradA[0] => EntradA[0].IN1
+EntradA[1] => EntradA[1].IN1
+EntradA[2] => EntradA[2].IN1
+EntradA[3] => EntradA[3].IN1
+EntradB[0] => comb.IN0
+EntradB[1] => comb.IN0
+EntradB[2] => comb.IN0
+EntradB[3] => comb.IN0
+selec => selec.IN1
+SALIDA[0] <= sumador:sumador1.sa1
+SALIDA[1] <= sumador:sumador2.sa1
+SALIDA[2] <= sumador:sumador3.sa1
+SALIDA[3] <= sumador:sumador4.sa1
+COUT <= COUT.DB_MAX_OUTPUT_PORT_TYPE
+C4 <= C4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:modulo1
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:modulo2
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:modulo3
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:modulo4
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:sumador1
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:sumador2
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:sumador3
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|operaciones:moduloselector|restadors:sumadorrestador|sumador:sumador4
+entradaa => y1.IN0
+entradaa => y3.IN0
+entradab => y1.IN1
+entradab => y3.IN1
+entradac => sa1.IN1
+entradac => y2.IN1
+sa1 <= sa1.DB_MAX_OUTPUT_PORT_TYPE
+sa2 <= sa2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|decenayunidad:salidafinal
+bin[0] => unidadyx[0].DATAIN
+bin[1] => LessThan1.IN8
+bin[1] => Add1.IN8
+bin[1] => BCD_R.DATAA
+bin[2] => LessThan0.IN6
+bin[2] => Add0.IN6
+bin[2] => BCD_R.DATAA
+bin[3] => LessThan0.IN5
+bin[3] => Add0.IN5
+bin[3] => BCD_R.DATAA
+bin[4] => LessThan0.IN4
+bin[4] => Add0.IN4
+bin[4] => BCD_R.DATAA
+unidadyx[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[2] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[3] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[0] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[2] <= <GND>
+decenayx[3] <= <GND>
+
+
+|unificador|decenayunidad:entradaA1
+bin[0] => unidadyx[0].DATAIN
+bin[1] => LessThan1.IN8
+bin[1] => Add1.IN8
+bin[1] => BCD_R.DATAA
+bin[2] => LessThan0.IN6
+bin[2] => Add0.IN6
+bin[2] => BCD_R.DATAA
+bin[3] => LessThan0.IN5
+bin[3] => Add0.IN5
+bin[3] => BCD_R.DATAA
+bin[4] => LessThan0.IN4
+bin[4] => Add0.IN4
+bin[4] => BCD_R.DATAA
+unidadyx[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[2] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[3] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[0] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[2] <= <GND>
+decenayx[3] <= <GND>
+
+
+|unificador|decenayunidad:entradaB1
+bin[0] => unidadyx[0].DATAIN
+bin[1] => LessThan1.IN8
+bin[1] => Add1.IN8
+bin[1] => BCD_R.DATAA
+bin[2] => LessThan0.IN6
+bin[2] => Add0.IN6
+bin[2] => BCD_R.DATAA
+bin[3] => LessThan0.IN5
+bin[3] => Add0.IN5
+bin[3] => BCD_R.DATAA
+bin[4] => LessThan0.IN4
+bin[4] => Add0.IN4
+bin[4] => BCD_R.DATAA
+unidadyx[0] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[2] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+unidadyx[3] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[0] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[1] <= BCD_R.DB_MAX_OUTPUT_PORT_TYPE
+decenayx[2] <= <GND>
+decenayx[3] <= <GND>
+
+
+|unificador|multiplexor_7seg:entradaAunidades
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|multiplexor_7seg:entradaAdecenas
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|multiplexor_7seg:entradaBunidades
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|multiplexor_7seg:entradaBdecenas
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|multiplexor_7seg:salidadecenas
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|unificador|multiplexor_7seg:salidaunidades
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SSeg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSeg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
