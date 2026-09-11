@@ -9,7 +9,6 @@
 
 Indice:
 
-1. [Documentación](
     
 SUMADOR DE 1 BIT 
 
@@ -25,7 +24,7 @@ Duplicamos el sumador de 4 bits y mientras el selector estuviera activo se consi
 
 SUMADOR RESTADOR 
 
-es la implementacion de todos los codigos con un selector que nos permite alternar entre sumar y restar
+Es la implementacion de todos los codigos con un selector que nos permite alternar entre sumar y restar
 
 
 3. [Evidencias de implementación]
@@ -33,8 +32,8 @@ es la implementacion de todos los codigos con un selector que nos permite altern
 FOTO DEL SUMADORESTADOR IMPLEMENTADO EN LA FPGA
 
 <img
-  src="/Img/"DIAGRAMASUMADORESTADOR"
-  alt="La cabeza y el torso de un esqueleto de dinosaurio;
+  src="/Img
+    alt="La cabeza y el torso de un esqueleto de dinosaurio;
            tiene una cabeza grande con dientes largos y afilados"
   width="4000"
   height="310" />
@@ -84,7 +83,9 @@ sumador restador
 
 ## Conclusiones
 
-De este proyecto pudimos concluir y desarrollar nuevas habilidades a cerca del manejo de conceptos basicos y operaciones de n
+De este proyecto pudimos concluir y desarrollar nuevas habilidades a cerca del manejo de conceptos basicos y operaciones con numero binarios a traves de el desarollo de los ejercicios y implimentaciones presentadas.
 
 ## Referencias
 
+
+- digitalECCI. (2026). *arquitecturaDeProcesadoresG1E6: Arquitectura de Procesadores - Grupo 1 Equipo 6*. GitHub. [https://github.com/digitalECCI/arquitecturaDeProcesadoresG1E6](https://github.com/digitalECCI/arquitecturaDeProcesadoresG1E6)
