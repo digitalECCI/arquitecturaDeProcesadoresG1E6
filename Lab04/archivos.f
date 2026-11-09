@@ -1,0 +1,14 @@
+principla_uart.v
+uart_msg.v
+uart_tx.v
+principla.v
+calculadora.v
+operaciones.v
+multiplicador.v
+banco_registro.v
+convertidorudc.v
+sevensegmentos.v
+sumador_1bit.v
+sumador_restador_4bits.v
+comparador_1bits.v
+comparador_4bits.v
