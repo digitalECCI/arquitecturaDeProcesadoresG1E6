@@ -1,0 +1,27 @@
+PuTTY | LI    000001100
+PuTTY | LI    000001010
+PuTTY | ADD  0000   rd=006 rs=012 rt=010
+PuTTY | SUB  0001   rd=014 rs=010 rt=012
+PuTTY | MUL  0010   rd=120 rs=012 rt=010
+PuTTY | OUT  1010 000 101 000 000         rs=120
+PuTTY | DIV  1011   rd=002 rs=012 rt=006
+PuTTY | SHR  0100   rd=003 rs=012 rt=002
+PuTTY | OUT  1010 000 111 000 000         rs=003
+PuTTY | AND  0101   rd=008 rs=012 rt=010
+PuTTY | OR   0110   rd=014 rs=012 rt=010
+PuTTY | XOR  0111   rd=006 rs=012 rt=010
+PuTTY | MAX  0011   rd=012 rs=010 rt=012
+PuTTY | MOV  1001   rd=006 rs=006
+PuTTY | LI    001100011
+PuTTY | HALT 1111 000 000 000 000
+t=5403630000  HALT
+[OK]    R0 = 0
+[OK]    R1 = 12
+[OK]    R2 = 10
+[OK]    R3 = 8
+[OK]    R4 = 14
+[OK]    R5 = 6
+[OK]    R6 = 12
+[OK]    R7 = 6
+TOTAL ERRORES: 0
+prueba_completa/tb_completa.v:96: $finish called at 5403630000 (1ps)

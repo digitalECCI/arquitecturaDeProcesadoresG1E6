@@ -1,0 +1,14 @@
+tb_top.v
+top.v
+unidad_control.v
+rom_programa.v
+banco_registro.v
+divisor_fsm.v
+ALU.v
+multiplicador_fsm.v
+sumador_restador_4b.v
+parcial.v
+comparador_1b.v
+sumador_1b.v
+uart_traza.v
+uart_tx.v
