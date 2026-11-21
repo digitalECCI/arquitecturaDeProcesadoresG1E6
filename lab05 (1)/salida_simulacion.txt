@@ -1,0 +1,14 @@
+PuTTY | LI    000000101
+PuTTY | LI    000000011
+PuTTY | ADD  0000   rd=008 rs=005 rt=003
+PuTTY | MUL  0010   rd=040 rs=008 rt=005
+PuTTY | OUT  1010 000 100 000 000         rs=040
+PuTTY | HALT 1111 000 000 000 000
+t=2008910000  HALT
+[OK]    R1 = 5
+[OK]    R2 = 3
+[OK]    R3 = 8
+[OK]    R4 = 40
+[OK]    LEDR[7:0] = 40
+TOTAL ERRORES: 0
+tb_top.v:102: $finish called at 2008910000 (1ps)
